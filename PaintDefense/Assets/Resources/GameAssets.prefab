@@ -45,3 +45,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HeadSprite: {fileID: 21300000, guid: c0919568207abd445b087322d0c6dcef, type: 3}
   Projectile: {fileID: 2196606984526762549, guid: f8cecfba676b464409de3ae0f6c4e581, type: 3}
+  ClassicTower: {fileID: 3140395600801220652, guid: a05eb7e99a9062542baed20525a6e4bc, type: 3}
+  ClassicEnemy: {fileID: 7032827489702870506, guid: e625de0d33e582b4982f6ced177d2b3e, type: 3}
+  BigEnemy: {fileID: 4985622303886638985, guid: 9969745c061897744a60d90ea6342fd7, type: 3}

@@ -1,16 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Helpers.Utils;
 
 public class Projectile : MonoBehaviour
 {
     public static void Create(Vector3 spawnPosition, Vector3 targetPos)
     {
-        Instantiate(GameAssets.i.Projectile, spawnPosition, Quaternion.identity);
+        Transform arrowTransorm = Instantiate(GameAssets.i.Projectile, spawnPosition, Quaternion.identity);
+
+        Projectile projectile = arrowTransorm.GetComponent<Projectile>();
+        projectile.Setup(targetPos);
     }
 
-    private void setup()
+    private Vector3 targetPosition;
+    private void Setup(Vector3 targetPos)
     {
+        this.targetPosition = targetPos;
+    }
+    
+    float moveSpeed = 10f;
+    Vector3 moveDir;
+    float angle;
+    float destroySelfDistance = 0.1f;
 
+    private void Update()
+    {
+        moveDir = (targetPosition - transform.position).normalized;
+
+        transform.position += moveDir * moveSpeed * Time.deltaTime;
+
+        angle = UtilsClass.GetAngleFromVectorFloat(moveDir);
+        transform.eulerAngles = new Vector3(0, 0, angle);
+        
+        if (Vector3.Distance(transform.position, targetPosition) < destroySelfDistance)
+        {
+            Destroy(gameObject);
+        }
     }
 }
