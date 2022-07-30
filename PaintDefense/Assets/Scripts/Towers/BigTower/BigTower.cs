@@ -4,10 +4,9 @@ using UnityEngine;
 using Helpers;
 using Helpers.Utils;
 
-public class TowerClassic : MonoBehaviour
+public class BigTower : MonoBehaviour
 {
     private Vector3 projectileShootFromPosition;
-
 
     //Cooldown Shoot
     private bool canShoot = false;
@@ -55,7 +54,7 @@ public class TowerClassic : MonoBehaviour
     public void Shoot(Vector2 EnemyPos)
     {
         projectileShootFromPosition = transform.Find("ProjectileShootFromPosition").position;
-        Projectile.Create(projectileShootFromPosition, EnemyPos);
+        FireBallProjectile.Create(projectileShootFromPosition, EnemyPos);
     }
 
     private Enemy GetClosestEnemy()

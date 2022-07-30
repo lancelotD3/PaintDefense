@@ -421,7 +421,7 @@ MonoBehaviour:
   wayPoints: []
   wayPointIndex: 0
   movementSpeed: 2
-  life: 20
+  life: 100
   damageOnGeneralLife: 1
 --- !u!50 &7030382306297294479
 Rigidbody2D:

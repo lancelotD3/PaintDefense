@@ -7,7 +7,11 @@ public class EmtpyTowerSpace : MonoBehaviour
 {
     [SerializeField]
     private ClassicTowerButton classicTowerButton;
-    
+    [SerializeField]
+    private BigTowerButton     BigTowerButton;
+
+    private bool towersHidden = true;
+
     private void OnMouseEnter()
     {
         gameObject.transform.localScale = new Vector3(1.2f, 1.2f, 1);
@@ -16,21 +20,26 @@ public class EmtpyTowerSpace : MonoBehaviour
     private void OnMouseDown()
     {
         classicTowerButton.gameObject.SetActive(true);
+        BigTowerButton.gameObject.SetActive(true);
+
+        towersHidden = false;
     }
 
     private void Update()
     {
-        if (classicTowerButton.gameObject.active)
+        if (!towersHidden)
         {
 
-            if (Vector3.Distance(classicTowerButton.gameObject.transform.position, MouseHelper.GetMousePos()) > 1f)
+            if (Vector3.Distance(gameObject.transform.position, MouseHelper.GetMousePos()) > 1f)
             {
                 classicTowerButton.gameObject.SetActive(false);
+                BigTowerButton.gameObject.SetActive(false);
+                towersHidden = true;
             }
         }
         else
         {
-            if (Vector3.Distance(classicTowerButton.gameObject.transform.position, MouseHelper.GetMousePos()) > 1f)
+            if (Vector3.Distance(gameObject.transform.position, MouseHelper.GetMousePos()) > 1f)
             {
                 gameObject.transform.localScale = new Vector3(1f, 1f, 1);
             }

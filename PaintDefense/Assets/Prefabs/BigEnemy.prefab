@@ -169,7 +169,7 @@ MonoBehaviour:
   wayPoints: []
   wayPointIndex: 0
   movementSpeed: 1.5
-  life: 40
+  life: 200
   damageOnGeneralLife: 2
 --- !u!1 &5380250557452792110
 GameObject:

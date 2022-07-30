@@ -18,7 +18,11 @@ public class GameAssets : MonoBehaviour
     public Sprite HeadSprite;
 
     public Transform Projectile;
+    public Transform FireBallProjectile;
+
     public Transform ClassicTower;
+    public Transform BigTower;
+
     public Transform ClassicEnemy;
     public Transform BigEnemy;
 }
