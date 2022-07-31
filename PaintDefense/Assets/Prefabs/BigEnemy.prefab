@@ -170,6 +170,8 @@ MonoBehaviour:
   wayPointIndex: 0
   movementSpeed: 1.5
   life: 200
+  reward: 100
+  finishedLevel: 0
   damageOnGeneralLife: 2
 --- !u!1 &5380250557452792110
 GameObject:

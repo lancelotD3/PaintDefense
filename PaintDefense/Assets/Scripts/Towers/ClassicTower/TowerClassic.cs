@@ -20,6 +20,9 @@ public class TowerClassic : MonoBehaviour
     [SerializeField]
     private float range = 3;
 
+    [SerializeField]
+    private static int price = 100;
+
     private Vector3 aimDir;
     private float angle;
 
@@ -80,4 +83,6 @@ public class TowerClassic : MonoBehaviour
             }
         }
     }
+
+    public static int GetPrice() => price;
 }

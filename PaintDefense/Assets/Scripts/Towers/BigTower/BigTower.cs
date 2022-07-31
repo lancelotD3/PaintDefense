@@ -19,6 +19,9 @@ public class BigTower : MonoBehaviour
     [SerializeField]
     private float range = 3;
 
+    [SerializeField]
+    private int price = 100;
+
     private Vector3 aimDir;
     private float angle;
 

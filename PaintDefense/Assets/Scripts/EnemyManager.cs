@@ -60,10 +60,4 @@ public class EnemyManager : MonoBehaviour
             return true;
         return false;
     }
-
-
-    private void Update()
-    {
-
-    }
 }

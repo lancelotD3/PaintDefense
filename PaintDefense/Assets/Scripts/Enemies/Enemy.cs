@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     public Transform[] wayPoints;
     public int wayPointIndex = 0;
 
+    private float approximation = 1f;
+
     //Transforms infos
     [SerializeField]
     private float movementSpeed = 2f;
@@ -17,6 +19,11 @@ public class Enemy : MonoBehaviour
     //GameObject Infos
     [SerializeField]
     private int life = 20;
+
+    [SerializeField]
+    public int reward = 0;
+
+    public bool finishedLevel = false;
 
     [SerializeField]
     private int damageOnGeneralLife;
@@ -28,6 +35,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         maxLife = life;
+        approximation = Random.Range(0f, 1f);
     }
 
     private void Awake()
@@ -53,6 +61,8 @@ public class Enemy : MonoBehaviour
         if (life <= 0)
         {
             Destroy(gameObject);
+            LeveManager levelManager = FindObjectOfType<LeveManager>();
+            levelManager.AddGolds(reward);
             EnemyManager.Remove(this);
         }
     }
@@ -66,7 +76,7 @@ public class Enemy : MonoBehaviour
             //Move Enemy from current waypoint to the next one
             //Using MoveToward method
 
-            transform.position = Vector2.MoveTowards(transform.position, wayPoints[wayPointIndex].transform.position, movementSpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, wayPoints[wayPointIndex].transform.position + new Vector3(Random.Range(-approximation, approximation), Random.Range(-approximation, approximation)) , movementSpeed * Time.deltaTime);
 
             //Calcul the VecDir to set the rotation
             if (wayPointIndex > 0)
@@ -77,7 +87,7 @@ public class Enemy : MonoBehaviour
             //If Enemy reaches position of waypoint he walked towards
             //then wayPointIndex is increased by 1
             //and Enemy starts to walk to the next waypoint
-            if (transform.position == wayPoints[wayPointIndex].transform.position)
+            if (Vector3.Distance(transform.position, wayPoints[wayPointIndex].transform.position) < approximation)
                 wayPointIndex += 1;
         }
     }
