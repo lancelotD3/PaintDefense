@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     //Transforms infos
     [SerializeField]
     private float movementSpeed = 2f;
+    private float initialSpeed = 2f;
     private Vector3 moveDir;
 
     //GameObject Infos
@@ -32,9 +33,13 @@ public class Enemy : MonoBehaviour
 
     private HealthBarEnemy bar;
 
+    private bool isSlow = false;
+    private float slowTime = 0;
+
     private void Start()
     {
         maxLife = life;
+        initialSpeed = movementSpeed;
         approximation = Random.Range(0f, 1f);
     }
 
@@ -69,6 +74,17 @@ public class Enemy : MonoBehaviour
 
     public void Move()
     {
+
+        if (isSlow)
+        {
+            slowTime -= Time.deltaTime;
+            if(slowTime < 0f)
+            {
+                isSlow = false;
+                movementSpeed = initialSpeed;
+            }
+        }
+
         //If Enemy did't reach last waypoint it can move
         //If Enemy reached last waypoint then it stops
         if (wayPointIndex <= wayPoints.Length - 1)
@@ -90,5 +106,14 @@ public class Enemy : MonoBehaviour
             if (Vector3.Distance(transform.position, wayPoints[wayPointIndex].transform.position) < approximation)
                 wayPointIndex += 1;
         }
+
+
+    }
+
+    public void NewSpeedWithDuration(float newSpeed, float duration)
+    {
+        isSlow = true;
+        slowTime = duration;
+        movementSpeed = newSpeed;
     }
 }

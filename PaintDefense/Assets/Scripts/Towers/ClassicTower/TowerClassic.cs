@@ -8,7 +8,6 @@ public class TowerClassic : MonoBehaviour
 {
     private Vector3 projectileShootFromPosition;
 
-
     //Cooldown Shoot
     private bool canShoot = false;
     [SerializeField]

@@ -8,7 +8,7 @@ public class BigTowerButton : MonoBehaviour
     {
         LeveManager levelManager = FindObjectOfType<LeveManager>();
 
-        if (levelManager.GetGolds() >= TowerClassic.GetPrice())
+        if (levelManager.GetGolds() >= BigTower.GetPrice())
         {
             EmtpyTowerSpace parent = GetComponentInParent<EmtpyTowerSpace>();
 
@@ -16,7 +16,7 @@ public class BigTowerButton : MonoBehaviour
             BigTower bigClassic = transform.GetComponent<BigTower>();
             bigClassic.transform.position = parent.gameObject.transform.position;
 
-            levelManager.RemoveGolds(TowerClassic.GetPrice());
+            levelManager.RemoveGolds(BigTower.GetPrice());
             parent.Desactivate();
         }
     }

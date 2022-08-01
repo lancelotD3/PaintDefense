@@ -4,7 +4,7 @@ using UnityEngine;
 using Helpers;
 using Helpers.Utils;
 
-public class BigTower : MonoBehaviour
+public class SlowTower : MonoBehaviour
 {
     private Vector3 projectileShootFromPosition;
 
@@ -18,6 +18,10 @@ public class BigTower : MonoBehaviour
     private int damage = 5;
     [SerializeField]
     private float range = 3;
+    [SerializeField]
+    private float enemySpeedWithSlow = 3;
+    [SerializeField]
+    private float slowTime = 3;
 
     [SerializeField]
     private static int price = 100;
@@ -49,6 +53,7 @@ public class BigTower : MonoBehaviour
                     canShoot = false;
                     Shoot(enemy.transform.position);
                     enemy.TakeDamage(damage);
+                    enemy.NewSpeedWithDuration(enemySpeedWithSlow, slowTime);
                 }
             }
         }
@@ -57,7 +62,7 @@ public class BigTower : MonoBehaviour
     public void Shoot(Vector2 EnemyPos)
     {
         projectileShootFromPosition = transform.Find("ProjectileShootFromPosition").position;
-        FireBallProjectile.Create(projectileShootFromPosition, EnemyPos);
+        Projectile.Create(projectileShootFromPosition, EnemyPos);
     }
 
     private Enemy GetClosestEnemy()

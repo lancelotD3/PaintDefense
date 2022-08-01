@@ -9,6 +9,8 @@ public class EmtpyTowerSpace : MonoBehaviour
     private ClassicTowerButton classicTowerButton;
     [SerializeField]
     private BigTowerButton     BigTowerButton;
+    [SerializeField]
+    private SlowTowerButton SlowTowerButton;
 
     private bool towersHidden = true;
 
@@ -21,6 +23,7 @@ public class EmtpyTowerSpace : MonoBehaviour
     {
         classicTowerButton.gameObject.SetActive(true);
         BigTowerButton.gameObject.SetActive(true);
+        SlowTowerButton.gameObject.SetActive(true);
 
         towersHidden = false;
     }
@@ -34,6 +37,7 @@ public class EmtpyTowerSpace : MonoBehaviour
             {
                 classicTowerButton.gameObject.SetActive(false);
                 BigTowerButton.gameObject.SetActive(false);
+                SlowTowerButton.gameObject.SetActive(false);
                 towersHidden = true;
             }
         }
@@ -48,5 +52,4 @@ public class EmtpyTowerSpace : MonoBehaviour
 
     public void Activate()    => gameObject.SetActive(true);
     public void Desactivate() => gameObject.SetActive(false);
-
 }

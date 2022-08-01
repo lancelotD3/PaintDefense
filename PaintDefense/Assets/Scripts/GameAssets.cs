@@ -22,6 +22,7 @@ public class GameAssets : MonoBehaviour
 
     public Transform ClassicTower;
     public Transform BigTower;
+    public Transform SlowTower;
 
     public Transform ClassicEnemy;
     public Transform BigEnemy;
