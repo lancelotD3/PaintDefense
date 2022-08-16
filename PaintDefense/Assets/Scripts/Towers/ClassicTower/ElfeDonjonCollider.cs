@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Helpers.Utils;
 
-public class TowerCollider : MonoBehaviour
+public class ElfeDonjonCollider : MonoBehaviour
 {
-    private TowerClassic parent;
+    private ElfeDonjon parent;
     private bool towersHidden = true;
 
     [SerializeField]
@@ -13,7 +13,7 @@ public class TowerCollider : MonoBehaviour
 
     private void Awake()
     {
-        parent = GetComponentInParent<TowerClassic>();
+        parent = GetComponentInParent<ElfeDonjon>();
     }
     private void OnMouseDown()
     {

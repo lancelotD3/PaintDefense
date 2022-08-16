@@ -20,9 +20,9 @@ public class GameAssets : MonoBehaviour
     public Transform Projectile;
     public Transform FireBallProjectile;
 
-    public Transform ClassicTower;
-    public Transform BigTower;
-    public Transform SlowTower;
+    public Transform ElfeDonjon;
+    public Transform Furnace;
+    public Transform Arbaïca;
     public Transform ExplosiveTower;
 
     public Transform ClassicTowerUpgrade1;

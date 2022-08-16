@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ExplosiveTowerCollider : MonoBehaviour
+public class ArbaœcaCollider : MonoBehaviour
 {
-    private EplosiveTower parent;
+    private Arbaœca parent;
     private void Awake()
     {
-        parent = GetComponentInParent<EplosiveTower>();
+        parent = GetComponentInParent<Arbaœca>();
     }
 
     private void OnMouseEnter()

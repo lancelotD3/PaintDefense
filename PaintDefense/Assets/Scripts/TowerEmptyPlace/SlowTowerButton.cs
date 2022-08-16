@@ -8,15 +8,15 @@ public class SlowTowerButton : MonoBehaviour
     {
         LeveManager levelManager = FindObjectOfType<LeveManager>();
 
-        if (levelManager.GetGolds() >= SlowTower.GetPrice())
+        if (levelManager.GetGolds() >= Arbaœca.GetPrice())
         {
             EmtpyTowerSpace parent = GetComponentInParent<EmtpyTowerSpace>();
 
-            Transform transform = Instantiate<Transform>(GameAssets.i.SlowTower, parent.transform.position, Quaternion.identity);
-            SlowTower slowClassic = transform.GetComponent<SlowTower>();
-            slowClassic.transform.position = parent.gameObject.transform.position;
+            Transform transform = Instantiate<Transform>(GameAssets.i.ArbaÔca, parent.transform.position, Quaternion.identity);
+            Arbaœca arbaœca = transform.GetComponent<Arbaœca>();
+            arbaœca.transform.position = parent.gameObject.transform.position;
 
-            levelManager.RemoveGolds(SlowTower.GetPrice());
+            levelManager.RemoveGolds(Arbaœca.GetPrice());
             parent.Desactivate();
         }
     }

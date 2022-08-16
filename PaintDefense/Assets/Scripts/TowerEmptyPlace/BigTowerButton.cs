@@ -8,15 +8,15 @@ public class BigTowerButton : MonoBehaviour
     {
         LeveManager levelManager = FindObjectOfType<LeveManager>();
 
-        if (levelManager.GetGolds() >= BigTower.GetPrice())
+        if (levelManager.GetGolds() >= Furnace.GetPrice())
         {
             EmtpyTowerSpace parent = GetComponentInParent<EmtpyTowerSpace>();
 
-            Transform transform = Instantiate<Transform>(GameAssets.i.BigTower, parent.transform.position, Quaternion.identity);
-            BigTower bigClassic = transform.GetComponent<BigTower>();
-            bigClassic.transform.position = parent.gameObject.transform.position;
+            Transform transform = Instantiate<Transform>(GameAssets.i.Furnace, parent.transform.position, Quaternion.identity);
+            Furnace fournaise = transform.GetComponent<Furnace>();
+            fournaise.transform.position = parent.gameObject.transform.position;
 
-            levelManager.RemoveGolds(BigTower.GetPrice());
+            levelManager.RemoveGolds(Furnace.GetPrice());
             parent.Desactivate();
         }
     }

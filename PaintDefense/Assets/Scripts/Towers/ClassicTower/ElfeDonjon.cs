@@ -4,7 +4,7 @@ using UnityEngine;
 using Helpers;
 using Helpers.Utils;
 
-public class BigTower : MonoBehaviour
+public class ElfeDonjon : MonoBehaviour
 {
     private Vector3 projectileShootFromPosition;
 
@@ -22,8 +22,13 @@ public class BigTower : MonoBehaviour
     [SerializeField]
     private static int price = 100;
 
+    [SerializeField]
+    private static int upgradePrice = 100;
+
     private Vector3 aimDir;
     private float angle;
+
+    private bool isAlive = true;
 
     private void Awake()
     {
@@ -52,12 +57,17 @@ public class BigTower : MonoBehaviour
                 }
             }
         }
+
+        if(isAlive == false)
+        {
+            Destroy(this);
+        }
     }
 
     public void Shoot(Vector2 EnemyPos)
     {
         projectileShootFromPosition = transform.Find("ProjectileShootFromPosition").position;
-        FireBallProjectile.Create(projectileShootFromPosition, EnemyPos);
+        Projectile.Create(projectileShootFromPosition, EnemyPos);
     }
 
     private Enemy GetClosestEnemy()
@@ -83,5 +93,11 @@ public class BigTower : MonoBehaviour
         }
     }
 
+    public void Destroy()
+    {
+        isAlive = false;
+    }
+
     public static int GetPrice() => price;
+    public static int GetUpgradePrice() => price;
 }

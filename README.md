@@ -13,7 +13,7 @@
         - Donjon d'Elrau : Vitesse semi-rapide, dégat moyen, range haute
             - Bonus : 
                 - Double fléches : tire deux projectiles en 1 tires (toutes les 8sec/6sec/4sec)
-                -  **TODO**
+                - **TODO**
         - Donjon de Cyranaman : Vitesse lente/moyenne, dégat semi-elevé, range trés-haute.
             - Bonus : 
                 - **TODO**

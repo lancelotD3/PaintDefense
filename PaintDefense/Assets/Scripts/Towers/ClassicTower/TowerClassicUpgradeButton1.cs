@@ -8,7 +8,7 @@ public class TowerClassicUpgradeButton1 : MonoBehaviour
     {
         LeveManager levelManager = FindObjectOfType<LeveManager>();
 
-        if (levelManager.GetGolds() >= TowerClassic.GetUpgradePrice())
+        if (levelManager.GetGolds() >= ElfeDonjon.GetUpgradePrice())
         {
             //TowerClassic parent = GetComponentInParent<TowerClassic>();
 

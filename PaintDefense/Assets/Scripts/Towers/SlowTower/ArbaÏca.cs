@@ -4,7 +4,7 @@ using UnityEngine;
 using Helpers;
 using Helpers.Utils;
 
-public class EplosiveTower : MonoBehaviour
+public class Arbaœca : MonoBehaviour
 {
     private Vector3 projectileShootFromPosition;
 
@@ -19,7 +19,9 @@ public class EplosiveTower : MonoBehaviour
     [SerializeField]
     private float range = 3;
     [SerializeField]
-    private float explosionRange = 1;
+    private float enemySpeedWithSlow = 3;
+    [SerializeField]
+    private float slowTime = 3;
 
     [SerializeField]
     private static int price = 100;
@@ -50,7 +52,8 @@ public class EplosiveTower : MonoBehaviour
                 {
                     canShoot = false;
                     Shoot(enemy.transform.position);
-                    EnemyManager.SetDamageToEnemiesInRange(enemy.transform.position, explosionRange, damage);
+                    enemy.TakeDamage(damage);
+                    enemy.NewSpeedWithDuration(enemySpeedWithSlow, slowTime);
                 }
             }
         }

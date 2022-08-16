@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowTowerCollider : MonoBehaviour
+public class FurnaceCollider : MonoBehaviour
 {
-    private SlowTower parent;
+    private Furnace parent;
     private void Awake()
     {
-        parent = GetComponentInParent<SlowTower>();
+        parent = GetComponentInParent<Furnace>();
     }
 
     private void OnMouseEnter()
