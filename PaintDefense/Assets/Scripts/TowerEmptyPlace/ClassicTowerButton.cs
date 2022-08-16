@@ -6,7 +6,6 @@ public class ClassicTowerButton : MonoBehaviour
 {
     private void OnMouseDown()
     {
-
         LeveManager levelManager = FindObjectOfType<LeveManager>();
 
         if(levelManager.GetGolds() >= TowerClassic.GetPrice())
@@ -20,6 +19,5 @@ public class ClassicTowerButton : MonoBehaviour
             levelManager.RemoveGolds(TowerClassic.GetPrice());
             parent.Desactivate();
         }
-
     }
 }

@@ -49,5 +49,6 @@ MonoBehaviour:
   ClassicTower: {fileID: 3140395600801220652, guid: a05eb7e99a9062542baed20525a6e4bc, type: 3}
   BigTower: {fileID: 5910331061460999440, guid: 800fc81a9158f5447bf5b3788fb2d1fb, type: 3}
   SlowTower: {fileID: 2263290622608544310, guid: 979504db5e04a0e49a8b022894a9a2f3, type: 3}
+  ExplosiveTower: {fileID: 3382984885312337131, guid: 616136187c605ff40b20face849d0a65, type: 3}
   ClassicEnemy: {fileID: 7032827489702870506, guid: e625de0d33e582b4982f6ced177d2b3e, type: 3}
   BigEnemy: {fileID: 4985622303886638985, guid: 9969745c061897744a60d90ea6342fd7, type: 3}

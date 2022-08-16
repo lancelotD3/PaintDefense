@@ -17,5 +17,7 @@ public class BigEnemy : Enemy
     {
         //Move Enemy
         Move();
+
+        CheckLife();
     }
 }

@@ -54,6 +54,17 @@ public class EnemyManager : MonoBehaviour
         return closest;
     }
 
+    public static void SetDamageToEnemiesInRange(Vector3 position, float range, int damage)
+    {
+        foreach(Enemy enemy in enemies)
+        {
+            if(Vector3.Distance(position, enemy.transform.position) <= range)
+            {
+                enemy.TakeDamage(damage);
+            }
+        }
+    }
+
     public static bool IsEmpty()
     {
         if (enemies.Count == 0)

@@ -17,10 +17,8 @@ public class ClassicEnemy : Enemy
     {
         //Move Enemy
         Move();
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-       
+        //Check life and kill the enemy if he have -0 hp
+        CheckLife();
     }
 }

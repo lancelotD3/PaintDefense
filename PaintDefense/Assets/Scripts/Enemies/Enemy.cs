@@ -62,7 +62,10 @@ public class Enemy : MonoBehaviour
         // Calculate the ratio of the life bar et resize the bar
         float ratio = ((float)life / (float)maxLife);
         bar.SetSize(ratio);
+    }
 
+    public void CheckLife()
+    {
         if (life <= 0)
         {
             Destroy(gameObject);
@@ -106,8 +109,6 @@ public class Enemy : MonoBehaviour
             if (Vector3.Distance(transform.position, wayPoints[wayPointIndex].transform.position) < approximation)
                 wayPointIndex += 1;
         }
-
-
     }
 
     public void NewSpeedWithDuration(float newSpeed, float duration)

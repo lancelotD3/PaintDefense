@@ -4,7 +4,7 @@ using UnityEngine;
 using Helpers;
 using Helpers.Utils;
 
-public class TowerClassic : MonoBehaviour
+public class EplosiveTower : MonoBehaviour
 {
     private Vector3 projectileShootFromPosition;
 
@@ -18,17 +18,14 @@ public class TowerClassic : MonoBehaviour
     private int damage = 5;
     [SerializeField]
     private float range = 3;
+    [SerializeField]
+    private float explosionRange = 1;
 
     [SerializeField]
     private static int price = 100;
 
-    [SerializeField]
-    private static int upgradePrice = 100;
-
     private Vector3 aimDir;
     private float angle;
-
-    private bool isAlive = true;
 
     private void Awake()
     {
@@ -53,14 +50,9 @@ public class TowerClassic : MonoBehaviour
                 {
                     canShoot = false;
                     Shoot(enemy.transform.position);
-                    enemy.TakeDamage(damage);
+                    EnemyManager.SetDamageToEnemiesInRange(enemy.transform.position, explosionRange, damage);
                 }
             }
-        }
-
-        if(isAlive == false)
-        {
-            Destroy(this);
         }
     }
 
@@ -93,11 +85,5 @@ public class TowerClassic : MonoBehaviour
         }
     }
 
-    public void Destroy()
-    {
-        isAlive = false;
-    }
-
     public static int GetPrice() => price;
-    public static int GetUpgradePrice() => price;
 }
