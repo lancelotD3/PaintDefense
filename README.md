@@ -10,7 +10,7 @@
  - Tours :
     - Donjon d'elfe : 
         - Niveau 1 : Vitesse mi-rapide, dégat moyen, range moyenne.
-        - Donjon d'Elrau : Vitesse semi-rapide, dégat moyen, range haute
+        - Donjon d'Elrau : Vitesse mi-rapide, dégat moyen, range haute
             - Bonus : 
                 - Double fléches : tire deux projectiles en 1 tires (toutes les 8sec/6sec/4sec)
                 - **TODO**
@@ -34,7 +34,7 @@
         - Niveau 1 : Vitesse moyenne-lente, dégat faible, range moyenne.
         - Arbaïca d'Agram : Vitesse très lente, dégat 0, range moyenne (bloque les ennemies)
             - Bonus : 
-                - Durée du filet (1s -> 1.3 -> 1.6)
+                - Durée du filet (1 -> 1.3 -> 1.6)
                 - Taille du filet (3 -> 4 -> 5)
         - Arbaïca d'Ornore : Cible les tanks, Vitesse moyenne-lente, dégat faible/moyen, range moyenne
             - Bonus : 

@@ -20,13 +20,22 @@ public class GameAssets : MonoBehaviour
     public Transform Projectile;
     public Transform FireBallProjectile;
 
+    // TOWERS
+    // Elfes Donjons
     public Transform ElfeDonjon;
+    public Transform ElfeDonjonlvl2;
+    public Transform ElrauDonjon;
+
+    // Furnaces
     public Transform Furnace;
+    
+    // Arbaïca
     public Transform Arbaïca;
+
+    //tki ?
     public Transform ExplosiveTower;
 
-    public Transform ClassicTowerUpgrade1;
-
+    // ENEMIES
     public Transform ClassicEnemy;
     public Transform BigEnemy;
 }
