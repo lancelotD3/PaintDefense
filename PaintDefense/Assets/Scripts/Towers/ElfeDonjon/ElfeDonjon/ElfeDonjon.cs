@@ -64,11 +64,6 @@ public class ElfeDonjon : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
-
     public void Shoot(Vector2 EnemyPos)
     {
         projectileShootFromPosition = transform.Find("ProjectileShootFromPosition").position;
@@ -104,7 +99,7 @@ public class ElfeDonjon : MonoBehaviour
     }
 
     public static int GetPrice() => price;
-    public static int GetUpgradePrice() => price;
+    public static int GetUpgradePrice() => upgradePrice;
 
     public float GetAngle() => angle;
 }

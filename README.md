@@ -10,6 +10,8 @@
  - Tours :
     - Donjon d'elfe : 
         - Niveau 1 : Vitesse mi-rapide, dégat moyen, range moyenne.
+        - Niveau 2 : Niveau 1 en mieux
+        - Niveau 3 : Niveau 2 en mieux
         - Donjon d'Elrau : Vitesse mi-rapide, dégat moyen, range haute
             - Bonus : 
                 - Double fléches : tire deux projectiles en 1 tires (toutes les 8sec/6sec/4sec)
@@ -43,3 +45,35 @@
 
 #### **LORE** :
 c'est la bagarre
+
+
+### **ASSET LIST** :
+
+- Donjon d'elfe : 
+    - Niveau 1 : V  
+    - Niveau 2 : V 
+    - Niveau 3 : V
+    - Donjon d'Elrau : X
+    - Donjon de Cyranaman : X
+
+- Fournaise :
+    - Niveau 1 : X  
+    - Niveau 2 : X  
+    - Niveau 3 : X   
+    - Fournaise de Dagnir : X  
+    - Donjon de Cyranaman : X
+
+- ArbaÏca :
+    - Niveau 1 : X  
+    - Niveau 2 : X  
+    - Niveau 3 : X  
+    - Arbaïca d'Agram : X
+    - Arbaïca d'Ornore : X
+
+- Menu :
+    - Main Menu : X
+    - Level Selector : X
+
+- Other :
+    - All Levels (need LD before) : X
+    - Enemies : X

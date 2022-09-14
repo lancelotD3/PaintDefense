@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Helpers.Utils;
 
-public class ElfeDonjonlvl2Collider : MonoBehaviour
+public class ElfeDonjonlvl3Collider : MonoBehaviour
 {
-    private ElfeDonjonlvl2 parent;
+    private ElfeDonjonlvl3 parent;
 
     [SerializeField]
-    private ElfeDonjonlvl3Button elfeDonjonlvl3Button;
+    private ElrauDonjonButton elrauDonjonButton;
     private bool towersHidden = true;
 
     private void Awake()
     {
-        parent = GetComponentInParent<ElfeDonjonlvl2>();
+        parent = GetComponentInParent<ElfeDonjonlvl3>();
     }
 
     private void OnMouseEnter()
@@ -23,7 +23,7 @@ public class ElfeDonjonlvl2Collider : MonoBehaviour
 
     private void OnMouseDown()
     {
-        elfeDonjonlvl3Button.gameObject.SetActive(true);
+        elrauDonjonButton.gameObject.SetActive(true);
         towersHidden = false;
     }
 
@@ -33,7 +33,7 @@ public class ElfeDonjonlvl2Collider : MonoBehaviour
         {
             if (Vector3.Distance(gameObject.transform.position, MouseHelper.GetMousePos()) > 1.5f)
             {
-                elfeDonjonlvl3Button.gameObject.SetActive(false);
+                elrauDonjonButton.gameObject.SetActive(false);
                 towersHidden = true;
             }
         }

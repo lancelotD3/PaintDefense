@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ElrauDonjonButton : MonoBehaviour
+public class ElfeDonjonlvl3Button : MonoBehaviour
 {
     private void OnMouseDown()
     {
@@ -12,9 +12,7 @@ public class ElrauDonjonButton : MonoBehaviour
         {
             ElfeDonjonlvl2 parent = GetComponentInParent<ElfeDonjonlvl2>();
 
-            Transform transform = Instantiate<Transform>(GameAssets.i.ElrauDonjon, parent.transform.position, Quaternion.identity);
-            //ElrauDonjon elrauDonjon = transform.GetComponent<ElrauDonjon>();
-            //elrauDonjon.transform.position = parent.gameObject.transform.position;
+            Transform transform = Instantiate<Transform>(GameAssets.i.ElfeDonjonlvl3, parent.transform.position, Quaternion.identity);
 
             levelManager.RemoveGolds(ElfeDonjonlvl2.GetUpgradePrice());
             parent.isAlive = false;

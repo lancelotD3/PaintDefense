@@ -48,6 +48,7 @@ MonoBehaviour:
   FireBallProjectile: {fileID: 7233922224982632404, guid: 61fd74eaaeaf8fc4b96f3215e8b475ec, type: 3}
   ElfeDonjon: {fileID: 3140395600801220652, guid: a05eb7e99a9062542baed20525a6e4bc, type: 3}
   ElfeDonjonlvl2: {fileID: 6454479245667239947, guid: a41494dd7fb70ee45bb831e43047ff88, type: 3}
+  ElfeDonjonlvl3: {fileID: 4916578231109642575, guid: d2e48fe095ac470458c7cba657b617e6, type: 3}
   ElrauDonjon: {fileID: 8819388402639512570, guid: 01297433dc51e404d94f87a4153e71ca, type: 3}
   Furnace: {fileID: 5910331061460999440, guid: 800fc81a9158f5447bf5b3788fb2d1fb, type: 3}
   "Arba\xEFca": {fileID: 2263290622608544310, guid: 979504db5e04a0e49a8b022894a9a2f3, type: 3}

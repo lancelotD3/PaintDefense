@@ -24,6 +24,7 @@ public class GameAssets : MonoBehaviour
     // Elfes Donjons
     public Transform ElfeDonjon;
     public Transform ElfeDonjonlvl2;
+    public Transform ElfeDonjonlvl3;
     public Transform ElrauDonjon;
 
     // Furnaces
